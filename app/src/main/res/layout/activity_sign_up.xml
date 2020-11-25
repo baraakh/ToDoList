@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/sign_up_context_msg"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/appCompatEditText"
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone_number"
+                style="@style/form_input"
+                android:hint="@string/hint_your_name"
+                android:padding="@dimen/padding_et" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/appCompatEditText2"
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatEditText">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/form_input"
+                android:hint="@string/hint_password"
+                android:padding="@dimen/padding_et" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/appCompatEditText3"
+            style="@style/card_view"
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            app:contentPadding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/form_input"
+                android:hint="@string/hint_your_email_address"
+                android:padding="@dimen/padding_et" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/button_background_shape"
+            android:text="@string/create_your_profile"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatEditText3" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/materialTextView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/already_have_an_account"
+            android:textColor="#88FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/log_in"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
