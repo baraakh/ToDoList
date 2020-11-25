@@ -12,4 +12,6 @@
     <string name="login_context_msg">Welcome back!</string>
     <string name="dont_have_an_account">Don\'t have an account</string>
     <string name="forget_password">Forget your password?</string>
+    <string name="description">Description</string>
+    <string name="delete">Delete</string>
 </resources>
