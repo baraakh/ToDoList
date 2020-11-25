@@ -14,4 +14,10 @@
     <string name="forget_password">Forget your password?</string>
     <string name="description">Description</string>
     <string name="delete">Delete</string>
+    <string name="view_task">View Task</string>
+    <string name="edit">Edit</string>
+    <string name="lists_todo">Lists ToDo</string>
+    <string name="hint_search">Search</string>
+    <string name="lists">Lists :</string>
+    <string name="hint_create_new_list_here">Create new list here</string>
 </resources>
