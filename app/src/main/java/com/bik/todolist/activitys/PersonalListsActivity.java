@@ -104,4 +104,14 @@ public class PersonalListsActivity extends AppCompatActivity implements TaskAdap
         databaseReference.child(Constant.USER).child(uid).child(listName).child(name).setValue(new TaskModel(name, b, ServerValue.TIMESTAMP, null));
         return b;
     }
+
+    @Override
+    public void onClick(TaskModel taskModel) {
+        Intent intent = new Intent(this, ViewTaskActivity.class);
+        intent.putExtra(Constant.TASK_NAME, taskModel.getTaskName());
+        intent.putExtra(Constant.TASK_DESC, taskModel.getDesc());
+        intent.putExtra(Constant.TASK_TIME, (long) taskModel.getTimeStamp());
+        intent.putExtra(Constant.LIST_NAME, listName);
+        startActivity(intent);
+    }
 }

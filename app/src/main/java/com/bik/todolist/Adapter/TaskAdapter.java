@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bik.todolist.R;
 import com.bik.todolist.model.TaskModel;
+import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
 
@@ -43,11 +44,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView textView;
         private CheckBox checkBox;
+        private MaterialCardView cardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textView = itemView.findViewById(R.id.tv_task_name);
             checkBox = itemView.findViewById(R.id.cb_task);
+            cardView = itemView.findViewById(R.id.cv_task);
         }
 
         public void bind(int position) {
@@ -57,16 +60,21 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.ViewHolder> {
                 textView.setPaintFlags(textView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                 checkBox.setChecked(true);
             }
+
             checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 boolean b = listener.onCheck(taskModel.getTaskName(), isChecked);
                 if (!b) {
                     textView.setPaintFlags(0);
                 }
             });
+
+            cardView.setOnClickListener(v -> listener.onClick(taskModel));
         }
     }
 
     public interface OnCheckBoxListener {
         boolean onCheck(String name, boolean b);
+
+        void onClick(TaskModel taskModel);
     }
 }

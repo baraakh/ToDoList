@@ -1,7 +1,5 @@
 package com.bik.todolist.model;
 
-import java.util.Map;
-
 public class TaskModel {
 
     private String taskName;
@@ -10,6 +8,11 @@ public class TaskModel {
     private String desc;
 
     public TaskModel() {
+    }
+
+    public TaskModel(Object timeStamp, String desc) {
+        this.timeStamp = timeStamp;
+        this.desc = desc;
     }
 
     public TaskModel(String taskName, boolean isChecked, Object timeStamp, String desc) {
