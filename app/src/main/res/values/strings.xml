@@ -24,4 +24,6 @@
     <string name="results">Result</string>
     <string name="personal_lists">Personal List</string>
     <string name="hint_create_new_task_here">Create new task here</string>
+    <string name="fill_this_field">Fill in this field</string>
+    <string name="erorr_failed_login">Wrong username or password</string>
 </resources>

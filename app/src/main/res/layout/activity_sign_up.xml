@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
-    tools:context=".SignUpActivity">
+    tools:context=".activitys.SignUpActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             app:layout_constraintTop_toBottomOf="@+id/materialTextView">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_phone_number"
+                android:id="@+id/et_name"
                 style="@style/form_input"
                 android:hint="@string/hint_your_name"
                 android:padding="@dimen/padding_et" />
@@ -53,8 +53,10 @@
             app:layout_constraintTop_toBottomOf="@+id/appCompatEditText">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_pass"
                 style="@style/form_input"
                 android:hint="@string/hint_password"
+                android:inputType="textPassword"
                 android:padding="@dimen/padding_et" />
         </com.google.android.material.card.MaterialCardView>
 
@@ -69,13 +71,14 @@
             app:layout_constraintTop_toBottomOf="@+id/appCompatEditText2">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email"
                 style="@style/form_input"
                 android:hint="@string/hint_your_email_address"
                 android:padding="@dimen/padding_et" />
         </com.google.android.material.card.MaterialCardView>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton"
+            android:id="@+id/btn_sign_up"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -99,9 +102,10 @@
             android:textColor="#88FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+            app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

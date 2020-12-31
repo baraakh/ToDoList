@@ -1,21 +1,21 @@
-package com.bik.todolist;
+package com.bik.todolist.activitys;
 
 import android.os.Bundle;
 import android.view.Menu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bik.todolist.databinding.ActivityListsBinding;
-import com.bik.todolist.databinding.ActivityPersonalListsBinding;
+import com.bik.todolist.R;
+import com.bik.todolist.databinding.ActivityViewTaskBinding;
 
-public class PersonalListsActivity extends AppCompatActivity {
+public class ViewTaskActivity extends AppCompatActivity {
 
-    private ActivityPersonalListsBinding binding;
+    private ActivityViewTaskBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityPersonalListsBinding.inflate(getLayoutInflater());
+        binding = ActivityViewTaskBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
@@ -26,7 +26,7 @@ public class PersonalListsActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.personal_menu, menu);
+        getMenuInflater().inflate(R.menu.task_toolbar, menu);
         return true;
     }
 }

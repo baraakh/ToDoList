@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
-    tools:context=".activitys.ListsActivity">
+    tools:context=".activitys.PersonalListsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -20,43 +20,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/lists_todo"
+            android:text="@string/title_things_todo"
             android:textColor="@color/white" />
     </androidx.appcompat.widget.Toolbar>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/appCompatEditText"
-        style="@style/card_view"
-        android:layout_width="match_parent"
-        android:layout_margin="20dp"
-        app:contentPadding="0dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_search"
-            style="@style/form_input"
-            android:drawableStart="@drawable/ic_baseline_search"
-            android:drawablePadding="8dp"
-            android:hint="@string/hint_search"
-            android:inputType="text"
-            android:maxLines="1"
-            android:imeOptions="actionSearch"
-            android:padding="@dimen/padding_et" />
-    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_lists"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="@string/lists"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="@string/personal_lists" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:text="@string/delete"
+        android:textColor="#66FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
     <com.google.android.material.card.MaterialCardView
@@ -70,11 +59,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_lists">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_add_list"
+            android:id="@+id/et_add_task"
             style="@style/form_input"
             android:drawableStart="@drawable/ic_baseline_add_24"
             android:drawablePadding="8dp"
-            android:hint="@string/hint_create_new_list_here"
+            android:hint="@string/hint_create_new_task_here"
             android:imeOptions="actionDone"
             android:inputType="text"
             android:maxLines="1"
@@ -82,14 +71,14 @@
     </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_lists"
+        android:id="@+id/rv_tasks"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="20dp"
+        tools:listitem="@layout/task_card_layout"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
-        tools:listitem="@layout/list_card_layout" />
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
