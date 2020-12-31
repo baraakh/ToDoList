@@ -20,4 +20,8 @@
     <string name="hint_search">Search</string>
     <string name="lists">Lists :</string>
     <string name="hint_create_new_list_here">Create new list here</string>
+    <string name="hint_meet">meet</string>
+    <string name="results">Result</string>
+    <string name="personal_lists">Personal List</string>
+    <string name="hint_create_new_task_here">Create new task here</string>
 </resources>
